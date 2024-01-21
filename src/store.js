@@ -8,7 +8,7 @@ accessing the store by specifying 'shallow' to be used at creation, rather than 
 component that calls it. This will become the only way in Zustand v5. */
 
 const store = (set) => ({
-  tasks: [{ title: "TestTask", state: "PLANNED" }],
+  tasks: [],
   draggedTask: null,
   addTask: (title, state) => set(store => ({ tasks: [...store.tasks, { title, state }] }), false, 'addTask'),
   deleteTask: (title) => set(store => ({ tasks: store.tasks.filter(t => t.title !== title) }), false, 'deleteTask'),
