@@ -36,7 +36,7 @@ const Column = ({ state }) => {
         <p>{state}</p>
         <button onClick={() => setOpen(true)}>Add</button>
       </div>
-      {tasks.map((task, i) => <Task key={i} title={task.title} />)}
+      {tasks.map(task => <Task key={task.id} id={task.id} />)}
       {open && <div className='Modal'>
         <div className='modalContent'>
           <input onChange={(e) => setText(e.target.value)} value={text} />
