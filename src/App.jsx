@@ -1,7 +1,14 @@
 import Column from './components/Column'
 import './App.css'
+import { useEffect } from 'react'
+import { useStore } from './store'
 
 function App() {
+  const fetch = useStore(store => store.fetch)
+
+  useEffect(() => {
+    fetch()
+  }, [])
 
   return (
     <div className='App'>
